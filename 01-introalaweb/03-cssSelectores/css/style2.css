@@ -1,5 +1,5 @@
 body {
-    background-color: cadetblue;
+    background-color: rgb(0, 112, 116);
     font-size: 18px;
     font-family: 'Nunito', sans-serif;
     margin: 0;
@@ -33,5 +33,5 @@ div {
 
 ul li:nth-child(odd){
     font-style: italic;
-    color: darkgoldenrod;
+    color: rgb(92, 0, 31);
 }

@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+}
+
+header {
+    background-color: #108f94;
+    height: 10vh;
+}
+
+aside{
+    background-color: #396909;
+    float: left;
+    height: 80vh;
+    width: 20%;
+}
+
+main {
+    background-color: #681123;
+    float: right;
+    height: 80vh;
+    width: 80%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: #d8b90d;
+    height: 10vh;
+    width: 100%;
+}
