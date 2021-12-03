@@ -1,4 +1,5 @@
 body {
+    background-color: cadetblue;
     font-size: 18px;
     font-family: 'Nunito', sans-serif;
     margin: 0;
@@ -24,4 +25,13 @@ nav a:hover {
 
 h1 , p , div, nav {
     text-align: center;
+}
+
+div {
+    border: 1px solid black;
+}
+
+ul li:nth-child(odd){
+    font-style: italic;
+    color: darkgoldenrod;
 }
