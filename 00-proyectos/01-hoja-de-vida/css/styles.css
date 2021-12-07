@@ -1,0 +1,13 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    margin: 0;
+}
+
+header {
+    align-items: flex-end;
+    background-color: #264653;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+}
