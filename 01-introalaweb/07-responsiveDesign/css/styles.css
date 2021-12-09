@@ -1,0 +1,77 @@
+/* asi quito los valores por defecto del navegador */
+*,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* con esta de arriba meto todo el html en una caja */
+}
+
+/* ESTILOS BASICOS DE MI HTML es un tip para marcar q estoy trabajando */
+.encabezado, .contenido, .contenido_lateral, .pie_pagina{
+    padding: 1em, 2em;
+    /* CUANDO DAMOS UN PADDING, LOS ELEMENTOS TIENDEN A EXPANDIRSE MAS, AL DARLE EN EM TIENEN A EXPANDIRSE NORMAL EN ESE RANGO */
+}
+
+.encabezado, .contenido_lateral, .pie_pagina{
+    float: left; /* alinea los elementos a la izq */
+    box-sizing: border-box; /* hace que los elementos mantengan un tamaño definifo sin expandirse mas*/
+}
+
+.encabezado{
+    background-color: rgb(247, 240, 22);
+    height: 100px;
+}
+
+.contenido{
+    width: 60%;
+}
+
+.contenido_lateral{
+    background-color: rgb(163, 163, 113);
+    height: 500px;
+    width: 40%;
+}
+
+.post{
+    background-color: rgba(117, 225, 26, 0.46);
+    height: 100px;
+    margin-bottom: 1em;
+}
+
+.pie_pagina{
+    background-color: black;
+    height: 50px;
+    width: 100%;
+}
+
+/* ACA VOY A TRABAJAR MIS MEDIA QUERIES */
+/* este de abajo es una estrategia mobile first */
+@media screen and (min-width: 780px) and (max-width:1024px) {
+    .encabezado{
+        background-color: rgb(246, 246, 243);
+    }
+    .contenido_lateral, .contenido_lateral{
+        width: 50%;
+    }
+    
+}
+@media screen and (min-width: 480px) and (max-width:780px) {
+    .encabezado{
+        background-color: rgb(25, 250, 250);
+    }
+    .contenido_lateral, .contenido_lateral{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 480px) {
+    .encabezado{
+        height: 80px;
+    }
+    .contenido{
+        background-color: rgb(250, 168, 168);
+    }
+    .contenido_lateral{
+        width: 100%;
+    }
+}
+
