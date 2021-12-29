@@ -43,11 +43,6 @@ nav div input:hover{
     font-size: 48px;
 }
 
-.icons{
-    color: #4e4e4e;
-    font-size: 25px;
-}
-
 .letter_color{
     background-color: black;
     border-radius: 24px;
@@ -63,6 +58,26 @@ nav div input:hover{
 
 .div_dos{
     width: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.div_dos i{
+    position: absolute;
+    color: #4e4e4e;
+}
+
+.search_icon{
+    align-items: center;
+    padding: 10px;
+    min-width: 40px;
+}
+
+.div_dos .buscar_placeholder{
+    color: #4e4e4e;
+    font-weight: normal;
+    padding: 0 40px;
+    position: absolute;
 }
 
 .div_tres{
@@ -71,8 +86,14 @@ nav div input:hover{
     width: 20%;
 }
 
+.icons{
+    color: #4e4e4e;
+    font-size: 25px;
+}
+
 .search{
     background-color: #e4e4e4;
+    border: none;
     border-radius: 24px;
     color: black;
     float: center;
@@ -116,8 +137,20 @@ img{
 
 /* media queries responsive design  */
 @media screen and (min-width: 992px) and (max-width:1200px) {
-    
-    
+    .div_uno{
+        width: 100%;
+    }
+    .div_tres{
+        width: 100%;
+    }
+    .photos{
+        display: grid;
+        grid-template-columns: repeat(4, 2fr);
+        grid-template-rows: repeat(2, 2fr);
+        column-gap: 20px;
+        row-gap: 20px;
+        padding: 200px 40px 0 40px;
+    }
 }
 @media screen and (min-width: 768px) and (max-width:992px) {
     /* nav{
@@ -143,6 +176,32 @@ img{
     }
 }
 
-@media screen and (min-width: 768px) {
-    
+@media screen and (min-width: 480px) and (max-width:768px) {
+    .top-nav{
+        height: 10em;
+    }
+
+    .top-nav{
+        display: block;
+    }
+
+    .div_uno{
+        width: 100%;
+    }
+    .div_dos{
+        display: flex;
+        margin-left: 0;
+        width: 80%;
+    }
+    .div_tres{
+        width: 100%;
+    }
+    .photos{
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-template-rows: repeat(5, 2fr);
+        column-gap: 20px;
+        row-gap: 20px;
+        padding: 250px 40px 0 40px;
+    }
 }
