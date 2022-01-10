@@ -181,6 +181,11 @@ nav .div_dos .search_icon:focus{
     grid-row-end: span 4;
 }
 
+.article-11{ 
+    grid-row-end: span 6;
+    margin-top: -460px;
+}
+
 
 /* .photos{
     display: grid;
@@ -224,13 +229,63 @@ article:hover .save-icon{
     background-color: red;
     border-radius: 30px;
     color: white;
+    display: none;
     margin: 20px 20px 0 0;
     padding: 15px 10px;
 	position: absolute;
 	right: 0;
 	top: 0;
     text-decoration: none;
-    z-index: 9;
+}
+
+.div-hover-img{
+    align-items: center;
+    display: none;
+    justify-content: space-around;
+    width: 100%;
+}
+
+article:hover .div-hover-img{
+    display: block;
+}
+
+.web{
+    background-color: white;
+    border-radius: 30px;
+    color: black;
+    font-size: 10px;
+    margin: 0 0 20px 15px;
+    padding: 10px 10px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+    text-decoration: none;
+}
+
+.share{
+    background-color: white;
+    border-radius: 40px;
+    color: black;
+    margin: 0 0 20px 148px;
+    font-size: 1rem;
+    padding: 10px 10px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.more{
+    background-color: white;
+    border-radius: 40px;
+    color: black;
+    margin: 0 0 20px 193px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 6px 10px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+    text-decoration: none;
 }
 
 /* estilos para perfiles debajo de las fotos */
