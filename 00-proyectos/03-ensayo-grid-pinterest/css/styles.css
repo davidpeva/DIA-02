@@ -1,4 +1,6 @@
 body{
+    box-sizing: border-box;
+    display: flex;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     margin: 0;
@@ -181,16 +183,10 @@ nav .div_dos .search_icon:focus{
     grid-row-end: span 4;
 }
 
-
-/* .photos{
-    display: grid;
-    grid-template-columns: repeat(10, 2fr);
-    grid-template-rows: repeat(4, 2fr);
-    grid-auto-rows: max-content;
-    column-gap: 20px;
-    row-gap: 20px;
-    padding: 90px 40px 0 40px;
-} */
+.article-11{ 
+    grid-row-end: span 6;
+    margin-top: -460px;
+}
 
 article{
     align-items: center;
@@ -234,11 +230,9 @@ article:hover .save-icon{
 }
 
 .div-hover-img{
-    /* hice este cambio de none */
-    display: none; 
     align-items: center;
+    display: none;
     justify-content: space-around;
-    position: absolute;
     width: 100%;
 }
 
@@ -247,50 +241,45 @@ article:hover .div-hover-img{
 }
 
 .web{
-    /* cambie este */
-    background-color: red;
+    background-color: white;
     border-radius: 30px;
     color: black;
     font-size: 10px;
-    /* cambie los margenes */
-    margin: 140px 0 0px 15px;
-    padding: 15px 10px;
+    margin: 0 0 20px 15px;
+    padding: 10px 10px;
 	position: absolute;
 	left: 0;
-	/* bottom: 0; */
+	bottom: 0;
     text-decoration: none;
 }
 
 .share{
-    background-color: red;
-    border-radius: 300px;
-    color: red;
-    margin: 150px 0 0px 155px;
+    background-color: white;
+    border-radius: 40px;
+    color: black;
+    margin: 0 0 20px 148px;
     font-size: 1rem;
     padding: 10px 10px;
 	position: absolute;
 	left: 0;
-	/* bottom: 0; */
+	bottom: 0;
 }
 
 .more{
-    background-color: red;
-    border-radius: 40%;
+    background-color: white;
+    border-radius: 40px;
     color: black;
-    margin: 140px 0 0px 190px;
-    font-size: 1rem;
+    margin: 0 0 20px 193px;
+    font-size: 1.1rem;
     font-weight: bold;
-    padding: 10px 10px;
+    padding: 6px 10px;
 	position: absolute;
 	left: 0;
-	/* bottom: 0; */
+	bottom: 0;
     text-decoration: none;
 }
 
-
-
 /* estilos para perfiles debajo de las fotos */
-
 
 .user-profile-photo-1{
     align-items: center;
@@ -308,58 +297,20 @@ article:hover .div-hover-img{
     width: 15%;
 }
 
-/* aca voy a poner el css grid de cada foto  */
-
-/* .article-1{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
+/* .mobile-first{
+    padding: 1em;
+    margin: 2em auto;
+    max-width: 1200px;
 } */
 
-
 /* media queries responsive design  */
-@media screen and (min-width: 992px) and (max-width:1200px) {
-    .div_uno{
-        width: 100%;
-    }
-    .div_tres{
-        width: 100%;
-    }
-    .photos{
-        display: grid;
-        grid-template-columns: repeat(4, 2fr);
-        grid-template-rows: repeat(2, 2fr);
-        column-gap: 20px;
-        row-gap: 20px;
-        padding: 200px 40px 0 40px;
-    }
-}
-@media screen and (min-width: 768px) and (max-width:992px) {
-    /* nav{
-        flex-direction: column;
-    } */
-    /* nav.topnav{
+@media only screen and (min-width: 600x) {
+    /* .mobile-first .photos article {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
     } */
-    .div_uno{
-        width: 100%;
-    }
-    .div_tres{
-        width: 100%;
-    }
-    .photos{
-        display: grid;
-        grid-template-columns: repeat(3, 2fr);
-        grid-template-rows: repeat(4, 2fr);
-        column-gap: 20px;
-        row-gap: 20px;
-        padding: 180px 40px 0 40px;
-    }
-}
 
-@media screen and (min-width: 480px) and (max-width:768px) {
+
     .top-nav{
         height: 10em;
     }
@@ -386,5 +337,56 @@ article:hover .div-hover-img{
         column-gap: 20px;
         row-gap: 20px;
         padding: 250px 40px 0 40px;
+    }
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    /* nav{
+        flex-direction: column;
+    } */
+    /* nav.topnav{
+        display: flex;
+        justify-content: space-evenly;
+    } */
+    .div_uno{
+        width: 100%;
+    }
+    .div_tres{
+        width: 100%;
+    }
+    
+    .arreglo-resp{
+        margin: -4em 0;
+    }
+
+    .photos{
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+        grid-template-rows: repeat(5, 2fr);
+        column-gap: 20px;
+        row-gap: 20px;
+        padding: 180px 40px 0 40px;
+    }
+}
+
+
+
+
+@media only screen and (min-width: 992px) {
+    .div_uno{
+        width: 100%;
+    }
+    .div_tres{
+        width: 100%;
+    }
+    .photos{
+        display: grid;
+        grid-template-columns: repeat(4, 2fr);
+        grid-template-rows: repeat(2, 2fr);
+        column-gap: 20px;
+        row-gap: 20px;
+        padding: 200px 40px 0 40px;
     }
 }

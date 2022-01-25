@@ -186,17 +186,6 @@ nav .div_dos .search_icon:focus{
     margin-top: -460px;
 }
 
-
-/* .photos{
-    display: grid;
-    grid-template-columns: repeat(10, 2fr);
-    grid-template-rows: repeat(4, 2fr);
-    grid-auto-rows: max-content;
-    column-gap: 20px;
-    row-gap: 20px;
-    padding: 90px 40px 0 40px;
-} */
-
 article{
     align-items: center;
     border-radius: 20%;
@@ -290,7 +279,6 @@ article:hover .div-hover-img{
 
 /* estilos para perfiles debajo de las fotos */
 
-
 .user-profile-photo-1{
     align-items: center;
     display: flex;
@@ -306,16 +294,6 @@ article:hover .div-hover-img{
     padding: 5px;
     width: 15%;
 }
-
-/* aca voy a poner el css grid de cada foto  */
-
-/* .article-1{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
-} */
-
 
 /* media queries responsive design  */
 @media screen and (min-width: 992px) and (max-width:1200px) {
