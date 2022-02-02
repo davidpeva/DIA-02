@@ -1,0 +1,16 @@
+RECOMENDACION DE COMO INICIAR
+
+QUE NECESITAMOS
+1.Cantidad de alumnos
+2.Cantidad de Notas General
+3.Nombres de los Alumnos
+4.Las Notas
+
+QUE PROCESOS
+1.Pedir cantidad de Alumnos
+2.Pedir la cantidad de notas con las que vamos a trabajar
+3.Pedir nombre y las notas de ese estudiante
+4.Promediar las notas por estudiante
+
+QUE LE VAS A MOSTRAR AL PROFESOR
+1.Mostrar nombres y calificacion final
