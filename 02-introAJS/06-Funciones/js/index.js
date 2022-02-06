@@ -101,8 +101,9 @@
 
 // }
 
+// ----------------------------------------------------------------
 // de aca para abajo es la solucion del 2 del profesor
-var numero = prompt("ingresa un numero");
+/*var numero = prompt("ingresa un numero");
 
 function numeroImpar(numero) {
     if (numero % 2 == 0) {
@@ -114,9 +115,8 @@ function numeroImpar(numero) {
 }
 
 var resultado = numeroImpar(numero);
-alert("el numero " + numero + "es " + resultado);
-
-
+alert("el numero " + numero + "es " + resultado);*/
+// -------------------------------------------------------------
 // function esPar(num) {
 //     num = Number(num);
 //     return num % 2 === 0;
@@ -124,3 +124,62 @@ alert("el numero " + numero + "es " + resultado);
 // function esImpar(num2) {
 //     return Math.abs(num % 2) === 1;
 // }
+
+
+
+// EJERCICIO PALINDROMO
+// definir una funcion la cual determine si la cadena de texto ingresada es un palindromo
+var texto;
+
+texto = prompt("ingresa una oracion");
+
+function palindromo(texto) {
+    // validacion de que si la persona ingresa mayus o minus la respete
+    // me valida y me gurda q sea mayuscyla y minuscu
+    var cadenaPrincipal = texto.toLowerCase().toUppercase();
+
+    // tambien quiero validar que no tenga espacio a los lados para que al hacer el reverse se lea bien
+    // un splir ya es un array
+    var letrasEspacios = cadenaPrincipal.splir("");
+
+    // aca voy a eliminar los espacios
+    var cadenaSinEspacios = "";
+    // el en IN estoy trabajando el for sobre la variable cadenasin espacios
+    for (i in letrasEspacios) {
+        if (letrasEspacios[i] != " ") {
+            cadenaSinEspacios += letrasEspacios[i];
+        }
+    }
+
+    var letras = cadenaSinEspacios;
+
+    var reverse = cadenaSinEspacios.split("").reverse("");
+
+    // es un boolean 
+    var igual = true;
+
+    for (i in letras) {
+        if (letras[i] == reverse[i]) {
+
+
+        }
+        else {
+
+        }
+
+    }
+
+    if (igual) {
+
+        resultado += "es un palindromo";
+
+    }
+    else {
+        resultado += "no es un palindromo"
+    }
+
+    return resultado;
+}
+
+
+alert(palindromo(texto));

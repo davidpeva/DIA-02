@@ -66,3 +66,5 @@ function imprimeResultados(resultados) {
 var imprimir = imprimeResultados(resultados);
 
 document.write(imprimir);
+
+// este arreglo imprimirlo aagarrar los valores en un arreglo

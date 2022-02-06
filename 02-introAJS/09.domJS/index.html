@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+
+    <title>Interactuar con el DOM</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body id="cuerpo">
+
+
+
+    <header>
+        <h1>Ejercicio para modificar el DOM</h1>
+
+    </header>
+
+    <main>
+        <div>
+            <div>
+                <h2>DATOS BASICOS</h2>
+            </div>
+            <label for="nombre">Ingresa tu nombre:</label>
+            <input id="nombre" type="text">
+            <!-- //este onclick me llama a captira nombre  -->
+            <a href="#" onclick="capturaNombre()">Mostrar Nombre</a>
+        </div>
+        <div>
+            <h2>INFORMACION DE NACIMIENTO</h2>
+        </div>
+        <div>
+            <label for="fecha">Selecciona tu fecha de nacimiento</label>
+            <input type="date" name="" id="fecha">
+
+            <button id="calcular">Calcular Edad</button>
+
+            <h4 id="edad"></h4>
+        </div>
+    </main>
+
+
+
+    <footer>
+        <a id="color" href="#" onclick="cambiarColor()">Cambiar Color</a>
+
+    </footer>
+
+    <script src="js/index.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>
