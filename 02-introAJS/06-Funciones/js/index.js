@@ -140,7 +140,7 @@ function palindromo(texto) {
 
     // tambien quiero validar que no tenga espacio a los lados para que al hacer el reverse se lea bien
     // un splir ya es un array
-    var letrasEspacios = cadenaPrincipal.splir("");
+    var letrasEspacios = cadenaPrincipal.split("");
 
     // aca voy a eliminar los espacios
     var cadenaSinEspacios = "";
