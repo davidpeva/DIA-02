@@ -1,16 +1,19 @@
 //este es el objeto de datos
 var cuentas = [
     { 
-        user: 'David', 
-        password: '123', 
+        user: 'david', 
+        password: '123',
+        saldo: 100, 
     },
     { 
-        user: 'Camila', 
-        password: '456', 
+        user: 'camila', 
+        password: '456',
+        saldo: 200, 
     },
     { 
-        user: 'Laura', 
-        password: '789', 
+        user: 'laura', 
+        password: '789',
+        saldo: 300, 
     }
 ];
 
@@ -26,8 +29,8 @@ function login() {
         if(user === cuentas[i].user && password === cuentas[i].password){
             //aca digo si los datos estan buenos o no porque asi no me recorre todo el tiempo el arreglo
             acceder = true;
-            localStorage.setItem('user', user.value);
-            localStorage.setItem('password', password.value);
+            localStorage.setItem('user', user);
+            localStorage.setItem('password', password);
         }
     }
     //con este if le doy acceso si los datos estan buenos
