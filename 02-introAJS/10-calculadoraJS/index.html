@@ -21,31 +21,32 @@
         <div class="cajacentro">
             <section class="columna1">
                 <header> 
-                    <h5 class="tamañoresultados"></h5>
-                    <h2>0</h2>
+                    <h5 id="operaciones" class="tamañoresultados"></h5>
+                    <h2 id="total">0</h2>
                 </header>
                 <div class="gridbotones">
-                    <button>7</button>
-                    <button>8</button>
-                    <button>9</button>
-                    <button>/</button>
-                    <button>4</button>
-                    <button>5</button>
-                    <button>6</button>
-                    <button>x</button>
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
-                    <button>+</button>
-                    <button>c</button>
-                    <button>0</button>
-                    <button>=</button>
-                    <button>-</button>
+                    <!-- LOS NUMERO VAN EN '' DEBIDO A QUE LOS OPERADORES NO LOS DEJA PONER SOLOS luego los convierto si necesito -->
+                    <button onclick="CapturarDatos('7')">7</button>
+                    <button onclick="CapturarDatos('8')">8</button>
+                    <button onclick="CapturarDatos('9')">9</button>
+                    <button onclick="CapturarDatos('/')">/</button>
+                    <button onclick="CapturarDatos('4')">4</button>
+                    <button onclick="CapturarDatos('5')">5</button>
+                    <button onclick="CapturarDatos('6')">6</button>
+                    <button onclick="CapturarDatos('x')">x</button>
+                    <button onclick="CapturarDatos('1')">1</button>
+                    <button onclick="CapturarDatos('2')">2</button>
+                    <button onclick="CapturarDatos('3')">3</button>
+                    <button onclick="CapturarDatos('+')">+</button>
+                    <button onclick="CapturarDatos('c')">c</button>
+                    <button onclick="CapturarDatos('0')">0</button>
+                    <button onclick="CapturarDatos('=')">=</button>
+                    <button onclick="CapturarDatos('-')">-</button>
                 </div>
             </section>
             <aside class="columna2">
                 <h4>Historial</h4>
-                <p class="tamañoresultados"></p>
+                <p id="historial" class="tamañoresultados"></p>
             </aside>
         </div>
 

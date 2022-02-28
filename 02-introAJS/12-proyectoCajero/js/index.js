@@ -3,17 +3,17 @@ var cuentas = [
     { 
         user: 'david', 
         password: '123',
-        saldo: 100, 
+        balance: 100, 
     },
     { 
         user: 'camila', 
         password: '456',
-        saldo: 200, 
+        balance: 200, 
     },
     { 
         user: 'laura', 
         password: '789',
-        saldo: 300, 
+        balance: 300, 
     }
 ];
 
@@ -22,6 +22,7 @@ function login() {
     //declaro variables de que el dato q se captura en el input sea el dato q esta en el objeto
     var user = document.getElementById('user').value;
     var password = document.getElementById('password').value;
+    
     //esta variable es la que me ayudara a q en el segundo if entre o diga vericiar
     let acceder = false;
     //ciclo para recorrer el objeto
@@ -31,6 +32,11 @@ function login() {
             acceder = true;
             localStorage.setItem('user', user);
             localStorage.setItem('password', password);
+        }
+        //CON ESTE PEDAZO ESTOY DECLARANDO EL BALANCE DEL USUARIO A LA MEMORIA 22-02-22
+        if(user === cuentas[i].user && password === cuentas[i].password){
+            var balance = Number(cuentas[i].balance);
+            localStorage.setItem('balance', balance);
         }
     }
     //con este if le doy acceso si los datos estan buenos
@@ -43,6 +49,9 @@ function login() {
         alert("Verifica tus datos")
     }
 }
+
+
+
 
 
 
