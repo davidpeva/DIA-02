@@ -20,6 +20,7 @@ function Calculo(data){
         }
         else
         {
+            //este es como una especie de true or false si esta vacio es como q estuviera 0 si tiene valor es 1 hace una cosa u otra dependiendo de lo que tenga
             if(operacion === '')
             {
                 //esta solo coge los numero y no los operadores porque le puse NUMBER
@@ -64,15 +65,15 @@ function CapturarDatos(id){
     let operaciones = document.getElementById('operaciones');
     //aca voy a capturar el historial
     let historial = document.getElementById('historial');
-    //este arreglo vacio es para poder almacenar lo de arriba de donde ingreso lo resultados para sumarlos
-    let array = [];
     //esta es para 
     let total;
 
-    if(id==="+" || id==="-" || id==="x" || id==="/" || id==="c")
+
+    if(id==="+" || id==="-" || id==="x" || id==="/")
     //este if es que si es un operador haga esta condicion DE ENVIAR LOS NUMEROS ARRIBA QUE ACABE DE ESCRIBIR si no el else ya se sabe q es un numero
     {
         operaciones.innerText = imprimirTotal.innerText + ' ' + id;
+        imprimirTotal.innerText = '';
         operador = 1;
     }
     else if(id==="=")
@@ -87,9 +88,23 @@ function CapturarDatos(id){
         //aca con este me imprime el resultado
         imprimirTotal.innerText = total;
 
+
         //aca es donde se actualizaria el historial
-        historial.innerText = operaciones.innerText + ' ' + id +' ' + total;
+        //CON EL ULTIMO HISTORIAL.INNERHTML DESPUES DEL BR YA ELLOS SE VAN BAJANDO(si lo hago al final el hgistporial.innerText me concatena seguido)
+        historial.innerHTML = operaciones.innerText + ' ' + id +' ' + total + "<br>" + historial.innerHTML;
+
+
     }
+    //este else if es para que cuando unda la c el total se vuelva 0 y me deje volver a hacer otr operacion
+    else if(id==="c")
+    {
+        //con este pongo el total de nuevo en 0
+        imprimirTotal.innerText = 0;
+        //aca le digo que es un string vacio para que me quede igual de reiniciado
+        operaciones.innerText = '';
+    
+    }
+
     else
     {
         //Con Number convierto a numero los strings
@@ -102,7 +117,11 @@ function CapturarDatos(id){
             imprimirTotal.innerText = numero;
             //vuelvo a poner el operador en cero para que me deje escribir mas numneros
             operador = 0;
+        
         }
+        
+        //por aca creo q pueda estar el tema de q pueda sumar si undo otro numero
+
         else
         {
             //Con este yo imprimo en el h2 lo q presione osea que concateno

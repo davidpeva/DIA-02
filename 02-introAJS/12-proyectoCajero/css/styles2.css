@@ -81,6 +81,10 @@ button:hover {
     background-color: #bbbbbb;
 }
 
+.nada:hover {
+    background-color: #bbbbbb;
+}
+
 .logout {
     background-color: #963726;
     color: #ffffff;
