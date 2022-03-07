@@ -61,6 +61,8 @@ function CapturarDatos(id){
         operaciones.innerText = balanceInicial + ' ' + id;
         
         operador = 1;
+
+        
     }
     else if(id==="=")
     {
@@ -76,7 +78,7 @@ function CapturarDatos(id){
         if(total > 990)
         {
         imprimirTotal.innerText = false;
-        operaciones.innerText = '';
+        operaciones.innerText = '-';
         historial.innerHTML = '';
         operacionInvalida = (nombre + '<br>' + ' tu cuenta no puede tener mas de 990 ');
         document.getElementById('nuevosaldo').innerHTML = operacionInvalida;
@@ -84,7 +86,7 @@ function CapturarDatos(id){
         if(total < 10)
         {
         imprimirTotal.innerText = false;
-        operaciones.innerText = '';
+        operaciones.innerText = '-';
         historial.innerHTML = '';
         operacionInvalida = (nombre + '<br>' + ' tu cuenta no puede tener menos de 10 ');
         document.getElementById('nuevosaldo').innerHTML = operacionInvalida;
@@ -95,27 +97,24 @@ function CapturarDatos(id){
         document.getElementById('bienvenida').innerHTML = nuevoSaldo;
         // con esta de abajo el valor del arreglo se va modificando
         balanceInicial = Calculo(array);
+        document.getElementById('nuevosaldo').innerHTML = '';
+        nuevoSaldo = '';
         }
         else if(array.includes('-') && total > 10)
         {
         nuevoSaldo = (nombre + ' retiraste ' + array[2] + ' tu nuevo saldo es: ' + total);
         document.getElementById('bienvenida').innerHTML = nuevoSaldo;
         balanceInicial = Calculo(array);
+        document.getElementById('nuevosaldo').innerHTML = '';
+        nuevoSaldo = '';
         }
-        /*else if(imprimirTotal = id)
-        {
-            balanceInicial = Calculo(array);
-            operador = 1;
-            
-        }*/
     }
     else if(id==="c")
     {
         imprimirTotal.innerText = balanceInicial;
-        operaciones.innerText = '';
+        operaciones.innerText = '-';
         document.getElementById('nuevosaldo').innerHTML = '';
         nuevoSaldo = '';
-    
     }
 
     else
