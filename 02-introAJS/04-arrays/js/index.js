@@ -32,7 +32,7 @@ if (nombre === "" || apellido1 === "" || apellido2 === "" || nombresMiembros ===
     alert("Por favor ingresa todos los datos")
 }
 else if (nombresMiembros.includes(",") === false) {
-    v
+
     alert("Olvidaste ingresar los nombres separados con una coma(,)");
 }
 else {

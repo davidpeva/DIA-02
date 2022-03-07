@@ -36,7 +36,7 @@ header h5, header h2, aside h4, aside p {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 8px 0;
+    padding: 0px 0;
     position: absolute;
     width: 450px;
 }
