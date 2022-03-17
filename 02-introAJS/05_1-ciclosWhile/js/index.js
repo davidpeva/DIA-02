@@ -31,5 +31,3 @@ do {
 // }
 
 
-// 3.SALIDAS
-alert(`la sumatoria de los numeros es ${sumatoria}`);

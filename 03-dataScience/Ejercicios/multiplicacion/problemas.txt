@@ -1,0 +1,7 @@
+ESTE PROBLEMA LO PONEN MUCHO EN LAS ENTREVISTAS
+multiplicar dos numeros sin unas el simbolo de multiplicar *
+
+.codigo
+.diagrama de flujo
+
+

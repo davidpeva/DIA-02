@@ -1,0 +1,18 @@
+ESCRIBIR EN PSEUDO CODIGO UN PROGRAMA Q ME DIGA SI UN NUMERO DADO ES PAR O IMPAR 
+
+ALGORITMO Si un numero es par o impar 
+
+
+INICIO
+     DECLARAR numero
+     ESCRIBIR ("Introduzca un numeroo entero: ")
+     LEER ("numero")
+
+     SI ("#" % 2 === 0), ENTONCES 
+     ESCRIBIR ("el numero es par")
+
+     SI NO
+     ESCRIBIR ("el numero es impar")
+     fin de la condicion
+
+FIN

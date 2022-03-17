@@ -46,6 +46,11 @@ function cambiarColor() {
 
 }
 
+var reponderColor = document.getElementById('color')
+
+reponderColor.addEventListener('return', () => {
+    reponderColor.classList.remove('reponerColor')
+})
 
 
 // adicionañ
