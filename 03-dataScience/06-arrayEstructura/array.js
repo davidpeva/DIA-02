@@ -50,7 +50,7 @@ class MyArray {
     //DESAFIO MORAL DE LA CLASE CREAR ESTE METODO
     unshift(item){
         
-
+        this.length++
         
     }
     //Y TAMBIEN CREAR ESTE OTRO METODO
