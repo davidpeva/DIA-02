@@ -49,29 +49,28 @@ class LinkedList {
             listaEnlazada = listaEnlazada.next;
         }
     }
-
+    //aca le paso el (valor) para que sea dinamico y me busque cualquier valor
     buscar(valor) {
-
-//este metodo tengo q repetirlo
-
-
-
         //con esta ya digo q tengo todos los valores
-        //! este signo significa si this.head es vacio
+        //con esta validacion--- ! este signo significa si this.head es vacio
         if(!this.head) {
             return null;
         }
-        //la validacion de arriba es para verificar que cuando no tenga valores de null
+        //la validacion de arriba es para verificar que cuando no tenga valores de null y tengo los valores
         let listaEnlazada = this.head;
+        //este me dice cuantas vueltas dio el while
         let contador = 0;
-        //este while me recorre los datos
+        //este while me recorre los valores q ya se sabe q tengo
         while (listaEnlazada) {
             contador++;
             if (listaEnlazada.value == valor) {
-                return listaEnlazada.valor;
+                return `El valor ${listaEnlazada.value} si fue encontrado en la vuelta ${contador}`;
             }
-            return 'el valor ${listaEnlazada.valor} si fue encontrado en la vuelta ${contador}';
+            //esto lo pongo para que el while no este dando vueltas infinitamente
+            listaEnlazada = listaEnlazada.next;
+            
         }
+        return `el valor ${valor} no fue encontrado`
     }
 }
 
@@ -82,7 +81,7 @@ linkedList.insertar('3');
 linkedList.insertar('12');
 linkedList.insertar('20');
 linkedList.recorrer();
-linkedList.buscar('12'); //aca le digo q me busque el valor 12
+console.log(linkedList.buscar('18')); //aca le digo q me busque el valor 12
 console.log('-------------------------')
 
 linkedList.eliminar();
