@@ -50,9 +50,12 @@ class MyArray {
     //DESAFIO MORAL DE LA CLASE CREAR ESTE METODO
     unshift(item){
         
-        this.length++
         
     }
+
+
+
+
     //Y TAMBIEN CREAR ESTE OTRO METODO
     //este no lleva parametro
     /*shift(){
@@ -80,7 +83,6 @@ arr1.pop();
 console.log(arr1.get(1));
 //aca vuelvo y cargo el arreglo para q me lo muestre modificado
 console.log(arr1);
-
 
 
 console.log(arr1.unshift("jellowww"));

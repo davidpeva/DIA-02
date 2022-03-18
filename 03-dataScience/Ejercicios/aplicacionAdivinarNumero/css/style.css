@@ -1,0 +1,83 @@
+body {
+    background-color: #7d7d7d;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+#contenedor {
+    display: flex;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.cajacentro {
+    border: 4px #343434 solid;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 12% auto !important;
+    width: 700px;
+    height: 22rem;
+    background-color: #c5ebff;
+    padding: 3%;
+}
+
+h2 {
+    color: #7d7d7d;
+    margin: 10px 0 10PX 0;
+    text-align: center;
+}
+
+h3 {
+    color: #437af2;
+    margin: 10px 0 10PX 0;
+    text-align: center;
+}
+
+.entrarNumero, #numero {
+    display: flex;
+    justify-content: center;
+    padding: 6px 2px;
+    text-align: center;
+}
+
+.entrarNumero input {
+    border: 2px #4f4f4f solid;
+    font-size: 1.5rem;
+    padding: 10px 16px;
+}
+
+.entrarNumero input::placeholder {
+    color: #7b7bff;
+    font-size: 1.2rem;
+}
+
+.boton, #botonAdivinar {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.boton input {
+    background-color: #7b7bff;
+    border: 2px #4f4f4f solid;
+    font-size: 1.5rem;
+    padding: 10px 16px;
+}
+
+#contenedor .cajacentro .domTexto {
+    border: 4px #343434 solid;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 16px auto !important;
+    width: 500px;
+    height: 5rem;
+    background-color: #437af2;
+    padding: 1%;
+}
+
+
+
+
+
