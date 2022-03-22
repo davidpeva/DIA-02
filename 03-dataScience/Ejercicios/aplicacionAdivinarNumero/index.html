@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/index.js"></script>
+    <script src="js/js2.js"></script>
 
     <title>Adivinador</title>
 
@@ -25,16 +25,21 @@
                     <h3>Puedes adivinarlo???</h3>
                 </header>
             </div>
-            <br>
             <div class="entrarNumero">
-                <input type="text" id="numero" placeholder="Ingresa el Número">
+                <input type="number" id="numero" placeholder="Ingresa el Número">
             </div>
-            <br>
+            <div class="botones">
             <div class="boton">
-                <input type="button" value="Adivinar" id="botonAdivinar">
+                <input type="button" value="Adivinar" id="boton" onclick="adivinador()">
+            </div>
+            <div class="boton2">
+                <input type="button" value="Otra Vez" id="boton2" onclick="otraVez()">
+            </div>
             </div>
             <div class="domTexto">
-                <h2></h2>
+                <p id="adivinar"></p>
+                <p id="intentos"></p>
+                <p id="mayorMenor"></p>
             </div>
         </div>
     </main>

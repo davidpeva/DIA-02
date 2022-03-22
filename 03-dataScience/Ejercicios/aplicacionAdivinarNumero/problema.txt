@@ -9,5 +9,12 @@ No se vale usar:
     - console
 
 
+-si acierta 
+-sale un textoque dice acertaste
+
+-si falla
+-sale un texto q diga fallaste
+-otro texto q diga llegas # de intentos
+
 
 tamboen puedo mirar el pronlema de q la pantalla vuelva al color q es de el modulo pasado
