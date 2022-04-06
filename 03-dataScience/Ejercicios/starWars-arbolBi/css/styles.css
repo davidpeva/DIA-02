@@ -1,0 +1,215 @@
+body{
+    background-color: #000000;
+    background-image: url('../img/star-wars-background.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    font-family: 'Red Hat Mono', monospace;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+/* COSAS GENERALES */
+header {
+    align-items: center;
+    display: flex;
+    /* float: left; */
+    font-weight: bold;
+    height: 25vh;
+    /* justify-content: space-between; */
+    margin: 10px 0 20px 0;
+    overflow: hidden;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 100;
+}
+
+.div-uno {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.div-dos {
+    align-items: center;
+    width: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.div-tres {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.div-dos, img{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-around;
+    padding: 0 0 20px 0;
+    object-fit: contain;
+    width: 100%;
+}
+
+.div-dos, .bienvenida {
+    color: #f4f4f4;;
+
+}
+
+main {
+    /* align-items: center; */
+    display: flex;
+    font-weight: bold;
+    height: 80vh;
+    justify-content: space-around;
+    width: 100%;
+    position: fixed;
+    top: 230px;
+    z-index: 50;
+}
+
+.div-cuatro {
+    align-items: center;
+    border: 1px solid #f4f4f4;
+    border-radius: 2rem;
+    display: flex;
+    background-color: rgba(0,0,0, .6);
+    backface-visibility: 10;
+    height: 60vh;
+    justify-content: center;
+    padding: 10px;
+    width: 40%;
+}
+
+.div-cinco {
+    align-items: center;
+    border: 1px solid #f4f4f4;
+    border-radius: 2rem;
+    display: flex;
+    background-color: rgba(0,0,0, .6);
+    height: 60vh;
+    justify-content: center;
+    padding: 10px;
+    width: 40%;
+}
+
+ /* BOTONES */
+input {
+    color: #f4e43a;
+    background-color: rgba(0,0,0, .7);
+    border: 0.5px solid #f4f4f4;
+    padding: 15px 25px;
+}
+
+.div-uno, input {
+    display: inline-block;
+    margin: 20px 0px 20px 10px;
+    text-align: center;
+}
+
+input:hover{
+    background-color: rgb(255, 255, 255, .1);
+    color: red;
+}
+
+.div-tres, input {
+    display: inline-block;
+    margin: 20px 10px 20px 10px;
+    text-align: center;
+}
+
+.botonesDos, #porAltura {
+    margin: 20px -11px;
+}
+
+.botonesDos, #esAltura {
+    margin: 10px 0 0 0;
+    width: 57px;
+} 
+
+input::placeholder {
+    color: red;
+    font-size: 0.8rem;
+}
+
+.cabecera, .bienvenida {
+    font-size: 1.3rem;
+}
+
+/* TABLAS */
+p {
+    display: flex;
+    height: 500px;
+    /* overflow-wrap: break-word; */
+    padding: 10px 0;
+    width: 35vw;
+    z-index: 1;
+}
+
+.div-cuatro, p {
+    align-items: baseline;
+    display: flex;
+    object-fit: contain;
+    justify-content: center;
+    text-align: justify;
+    z-index: 50;
+    contain: content;
+}
+/* DESPLAZAMIENTO TEXTO */
+#scroll {
+    color: #f4e43a;
+    display : flex;
+    align-items: center;
+    animation: slide-up 60s linear infinite;
+    font-family: impact, sans-serif;
+    background: none;
+    flex-shrink: 0;
+    object-fit: contain;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(0);
+        -webkit-transform: translateY(80%);
+    }
+    to {
+        transform: translateY(0);
+        -webkit-transform: translateY(-105%);
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
