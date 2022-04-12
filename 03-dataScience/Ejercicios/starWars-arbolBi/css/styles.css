@@ -151,7 +151,7 @@ input::placeholder {
 /* TABLAS */
 p {
     display: flex;
-    height: 500px;
+    height: 850px;
     /* overflow-wrap: break-word; */
     padding: 10px 0;
     width: 35vw;
@@ -167,13 +167,25 @@ p {
     z-index: 50;
     contain: content;
 }
+
+#show {
+    color: #f4e43a;
+    display : flex;
+    align-items: center;
+    background: none;
+    flex-shrink: 0;
+    object-fit: contain;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
 /* DESPLAZAMIENTO TEXTO */
 #scroll {
     color: #f4e43a;
     display : flex;
     align-items: center;
     animation: slide-up 60s linear infinite;
-    font-family: impact, sans-serif;
+    /* font-family: impact, sans-serif; */
     background: none;
     flex-shrink: 0;
     object-fit: contain;
@@ -184,7 +196,7 @@ p {
 @keyframes slide-up {
     from {
         transform: translateY(0);
-        -webkit-transform: translateY(80%);
+        -webkit-transform: translateY(52%);
     }
     to {
         transform: translateY(0);

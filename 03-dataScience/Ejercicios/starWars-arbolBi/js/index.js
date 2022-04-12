@@ -96,7 +96,46 @@ let data = [
 
 let scroll = document.querySelector('#scroll');
 //CON LA FUNCION CAMBIO EL JSON A STRINGS Y LA USO PARA IMPRIMIR Y ORGANIZAR EL TEXTO
-function texto (){
+function Texto (){
     return JSON.stringify(data, undefined, 4);
 }
-scroll.append(texto());
+scroll.append(Texto());
+
+
+// let show = document.querySelector('#show');
+// //CON ESTA FUNCION AL DAR CLICK EN DE ALTOS A BAJOS ME MUESTR LA INFO
+// function AltosBajos() {
+// 	// show.append(JSON.parse(data));
+// 	show.append(JSON.stringify({x:data}));
+// } 
+
+data.sort((a, b) => b.height - a.height);
+
+data.forEach((e) => {
+	console.log(`${e.name}, ${e.height}, ${e.mass}, ${e.hair_color}, ${e.skin_color}, ${e.eye_color}, ${e.gender}.`)
+});
+
+
+
+
+
+// ------------ esta fuye la q saque de stiock
+// var altosBajos = sortBy(data, "height");
+
+// console.log(altosBajos);
+
+//---este es un intento que estoy haciendo
+// function MasAltos (){
+    
+// 	for (const height of data["height"]) {
+        
+// 		return 
+		
+// 	}
+
+
+
+
+	// const altos = JSON.stringify(data[1]["height"], undefined, 4);
+    
+	// show.append(altos)
