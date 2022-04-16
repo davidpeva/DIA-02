@@ -94,48 +94,108 @@ let data = [
 ];
 
 
-let scroll = document.querySelector('#scroll');
+let corre = document.querySelector('#scroll');
 //CON LA FUNCION CAMBIO EL JSON A STRINGS Y LA USO PARA IMPRIMIR Y ORGANIZAR EL TEXTO
 function Texto (){
     return JSON.stringify(data, undefined, 4);
 }
-scroll.append(Texto());
+corre.append(Texto());
 
 
-// let show = document.querySelector('#show');
-// //CON ESTA FUNCION AL DAR CLICK EN DE ALTOS A BAJOS ME MUESTR LA INFO
+//ESTUDIAR ESTA FUNCION FLECHA COMO SE VERIA SI FUERA NORMAL PARA ENTENDERLKA MEJOR
+//Esta funcion de abajo me arregla de altos a bajos
+let altosBajos = data.sort((a, b) => b.height - a.height);
+let mostrar = document.querySelector('#show');
+
+
+function AltosBajos() {
+	let nuevoAlBa = [];
+	altosBajos.forEach(e => {
+		nuevoAlBa += (`* ${e.name}: ${e.height}cm <br><br>`);
+
+	});
+	return mostrar.innerHTML = nuevoAlBa;
+}
+
+function Hombres() {
+	let hombres = [];
+	altosBajos.forEach(e =>{
+		if (e.gender === "male"){
+        hombres += (`* ${e.name}: ${e.gender}. <br><br>`);
+	}
+	});
+    return mostrar.innerHTML = hombres;
+}
+
+function Mujeres() {
+	let mujeres = [];
+	altosBajos.forEach(e =>{
+		if (e.gender === "female"){
+        mujeres += (`* ${e.name}: ${e.gender}. <br><br>`);
+	}
+	});
+    return mostrar.innerHTML = mujeres;
+}
+
+let alturaIngresada = document.querySelector("#esAltura").value;
+
+function AlturaMayor () {
+	let nuevoArr = [];
+	// let onclick = false;
+	altosBajos.forEach(e =>{
+	if (alturaIngresada > e.height) {
+		// onclick = true;
+		nuevoArr += (`Estos personajes son + altos <br> * ${e.name}: ${e.height}. <br><br>`);
+	}
+    });
+	return mostrar.innerHTML = nuevoArr;
+}
+
+
+
+// HASTA ACA ME FUNCIONA PERFECTO EL CONSOLE LOG
+// let nuevoArr = "";
+// function AltosBajos(){
+//     altosBajos.forEach(e => {
+//     console.log((`${e.name}: ${e.height}cm `));
+// })
+// return show;
+// };
+
+
+//ESTA FUNCION ES LA QUE ME IMPRIME LOS LOS STRINGS
 // function AltosBajos() {
-// 	// show.append(JSON.parse(data));
-// 	show.append(JSON.stringify({x:data}));
-// } 
-
-data.sort((a, b) => b.height - a.height);
-
-data.forEach((e) => {
-	console.log(`${e.name}, ${e.height}, ${e.mass}, ${e.hair_color}, ${e.skin_color}, ${e.eye_color}, ${e.gender}.`)
-});
+//     return show.innerHTML = JSON.stringify(altosBajosMitad, undefined, '<br>');
+// }
 
 
 
 
+// CON ESTA FUNCION LO IMPRIMO ORDENADO EN EL CONSOLE LOG
+// onclick = false;
 
-// ------------ esta fuye la q saque de stiock
-// var altosBajos = sortBy(data, "height");
-
-// console.log(altosBajos);
-
-//---este es un intento que estoy haciendo
-// function MasAltos (){
-    
-// 	for (const height of data["height"]) {
-        
-// 		return 
-		
-// 	}
-
+// function AltosBajos(){
+// 	// if (onclick = true) {
+//     for (var i in nuevoData){
+//         console.log(i);
+//         for (var key in nuevoData[i]){
+//             console.log( key + ": " + nuevoData[i][key]);
+//         }
+//     }
+// 		// }
+// }
 
 
 
-	// const altos = JSON.stringify(data[1]["height"], undefined, 4);
-    
-	// show.append(altos)
+
+//la otra va a ser crearlo a partir de la cuncion de abajo con creando las keys
+// ESTA DE ABAJO ME SIRVIO PARA IR ACOMODANDO EN EL LOG DE A UN DATO PERO ME TOCABA CREAR EN LA CONCA CADA UNO
+// function AltosBajos() {
+// data.forEach((e) => {
+// 	console.log(`${e.name}, ${e.height}, ${e.mass}, ${e.hair_color}, ${e.skin_color}, ${e.eye_color}, ${e.gender}.`)
+// })
+// }
+
+
+
+

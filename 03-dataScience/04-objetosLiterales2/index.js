@@ -14,11 +14,11 @@ const persona = {
 }
 
 //Notacion de puntos ES LA Q SE USABA ANTES CUANDO NO TRABAJABA ESTO como para acceder a algo especifico
-console.log(pamela.apellido);
+console.log(persona.apellido);
 
 //notacion corchetes SE USA MUCHO CON JSON Y PARA HACER OPERACIONES Y COSAS
-console.log(pamela["primer Nombre"]);
-console.log(pamela["x" + 1]);
+console.log(persona["primer Nombre"]);
+console.log(persona["x" + 1]);
 
 //NORMALMENTE TODOS LOS JSONS VIENEN CON COMILLAS
 //LA IDEA ES DOMINAR COMO ACCEDER A LOS DATOS DE LOS ARREGLOS, JSON U OBJETOS
