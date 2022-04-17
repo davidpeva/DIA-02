@@ -137,20 +137,32 @@ function Mujeres() {
     return mostrar.innerHTML = mujeres;
 }
 
-let alturaIngresada = document.querySelector("#esAltura").value;
 
-function AlturaMayor () {
-	let nuevoArr = [];
-	// let onclick = false;
+function AlturaMayor() {
+	let alturaIngresada = Number(document.querySelector(".esAltura").value);
+	let arrMayor = [];
 	altosBajos.forEach(e =>{
-	if (alturaIngresada > e.height) {
-		// onclick = true;
-		nuevoArr += (`Estos personajes son + altos <br> * ${e.name}: ${e.height}. <br><br>`);
+		if (e.height > alturaIngresada && alturaIngresada != "" && alturaIngresada > 89) {
+			arrMayor += (`* ${e.name}: ${e.height}cm. <br><br>`);
+			return mostrar.innerHTML = arrMayor;
+		}else if(alturaIngresada > 211 || alturaIngresada < 89){
+			mostrar.innerHTML = `Ingresa una altura entre 90 y 210`;
 	}
-    });
-	return mostrar.innerHTML = nuevoArr;
+});
 }
 
+function AlturaMenor() {
+	let alturaIngresada = Number(document.querySelector(".esAltura").value);
+	let arrMenor = [];
+	altosBajos.forEach(e =>{
+		if (e.height < alturaIngresada && alturaIngresada != "" && alturaIngresada > 89) {
+			arrMenor += (`* ${e.name}: ${e.height}cm. <br><br>`);
+			return mostrar.innerHTML = arrMenor;
+		}else if(alturaIngresada > 211 || alturaIngresada < 89){
+			mostrar.innerHTML = `Ingresa una altura entre 90 y 210`;
+	}
+});
+}
 
 
 // HASTA ACA ME FUNCIONA PERFECTO EL CONSOLE LOG
