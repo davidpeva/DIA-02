@@ -93,6 +93,38 @@ let data = [
 	}
 ];
 
+let mascotas = [
+	{
+		"tipo": "rabbit",
+	},
+	{
+		"tipo": "canary",
+	},
+	{
+		"tipo": "golden fish",
+	},
+	{
+		"tipo": "horse",
+	},
+	{
+		"tipo": "lizard",
+	},
+	{
+		"tipo": "blue whale",
+	},
+	{
+		"tipo": "domestic cat",
+	},
+	{
+		"tipo": "lion",
+	},
+	{
+		"tipo": "platypus",
+	},
+	{
+		"tipo": "manatee",
+	}
+];
 
 let corre = document.querySelector('#scroll');
 //CON LA FUNCION CAMBIO EL JSON A STRINGS Y LA USO PARA IMPRIMIR Y ORGANIZAR EL TEXTO
@@ -101,12 +133,11 @@ function Texto (){
 }
 corre.append(Texto());
 
-
 //ESTUDIAR ESTA FUNCION FLECHA COMO SE VERIA SI FUERA NORMAL PARA ENTENDERLKA MEJOR
-//Esta funcion de abajo me arregla de altos a bajos
+//Esta funcion de abajo me arregla de altos a bajos}
+//ESTE ALTOS BAJOS ES EL ARREGLO ORDENADO DE DATA
 let altosBajos = data.sort((a, b) => b.height - a.height);
 let mostrar = document.querySelector('#show');
-
 
 function AltosBajos() {
 	let nuevoAlBa = [];
@@ -137,16 +168,15 @@ function Mujeres() {
     return mostrar.innerHTML = mujeres;
 }
 
-
 function AlturaMayor() {
 	let alturaIngresada = Number(document.querySelector(".esAltura").value);
 	let arrMayor = [];
 	altosBajos.forEach(e =>{
-		if (e.height > alturaIngresada && alturaIngresada != "" && alturaIngresada > 89) {
+		if (e.height >= alturaIngresada && alturaIngresada != "" && alturaIngresada > 95) {
 			arrMayor += (`* ${e.name}: ${e.height}cm. <br><br>`);
 			return mostrar.innerHTML = arrMayor;
-		}else if(alturaIngresada > 211 || alturaIngresada < 89){
-			mostrar.innerHTML = `Ingresa una altura entre 90 y 210`;
+		}else if(alturaIngresada > 202 || alturaIngresada < 95){
+			mostrar.innerHTML = `Ingresa una altura entre 96 y 202`;
 	}
 });
 }
@@ -155,14 +185,91 @@ function AlturaMenor() {
 	let alturaIngresada = Number(document.querySelector(".esAltura").value);
 	let arrMenor = [];
 	altosBajos.forEach(e =>{
-		if (e.height < alturaIngresada && alturaIngresada != "" && alturaIngresada > 89) {
+		if (e.height <= alturaIngresada && alturaIngresada != "" && alturaIngresada > 96) {
 			arrMenor += (`* ${e.name}: ${e.height}cm. <br><br>`);
 			return mostrar.innerHTML = arrMenor;
-		}else if(alturaIngresada > 211 || alturaIngresada < 89){
-			mostrar.innerHTML = `Ingresa una altura entre 90 y 210`;
+		}else if(alturaIngresada > 211 || alturaIngresada < 96){
+			mostrar.innerHTML = `Ingresa una altura entre 96 y 202`;
 	}
 });
 }
+
+function VerTodo() {
+	let nuevoAlBa = [];
+	altosBajos.forEach(e => {
+		nuevoAlBa += (`* ${e.name}: ${e.height}cm, ${e.mass}kg, <br>hair ${e.hair_color}, skin ${e.skin_color}, ${e.eye_color} eyes, ${e.gender}.  <br><br>`);
+
+	});
+	return corre.innerHTML = nuevoAlBa;
+}
+
+let nombres = [];
+let mascota = [];
+
+function JuntarArreglos() {
+	for (let i = 0; i < altosBajos.length; i++) {
+		nombres.push(altosBajos[i].name);
+	}
+	for (let j = 0; j < mascotas.length; j++) {
+		mascota.push(mascotas[j].tipo);
+	}
+    
+
+	//REVISAR BIEN ESTE LOOP PORQ PORCA PARECE QUE TENGO LA SOLICION CON TODOS LOS ARREGLOS VIEJOS
+	// altosBajos.forEach((num1, index) => {
+	// 	const num2 = mascotas[index];
+	// 	console.log(num1, num2);
+	// });
+
+	nombres.forEach((num1, index) => {
+		const num2 = mascota[index];
+		console.log(num1, num2);
+		nombres += (`*${num1}: ${num2}. <br>`);
+	});
+	return mostrar.innerHTML = nombres;
+}
+//esta ayuda fue la me ayudo a hacer esto de arriba
+// var n = [1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 20, 21, 22];
+// var m = [0, 1, 2, 3, 4, 5, 6, 7,  8,  9,  10, 11, 12, 13, 14, 15, 16];
+
+// n.forEach((num1, index) => {
+//   const num2 = m[index];
+//   console.log(num1, num2);
+// });
+
+
+
+
+// const arr = [{id: 1}, {id: 2}];
+
+// arr.forEach(object => {
+//   object.color = 'red';
+// });
+
+// // [{id: 1, color: 'red'}, {id: 2, color: 'red'}]
+// console.log(arr);
+
+// var nietos = [];
+// nietos.push({"01": nieto.label, "02": nieto.value});
+// return nietos;
+
+// var obj1 = {
+// 	fruits: ['Banana', 'Mango'],
+// 	vegetables: ['Potato', 'Broccoli'],
+//   };
+  
+//   var obj2 = {
+// 	store: 'Walmart',
+//   };
+  
+//   function merge_options(obj1,obj2) {
+// 	var obj3 = {};
+// 	for (var key in obj1) { obj3[key] = obj1[key]; }
+// 	for (var key in obj2) { obj3[key] = obj2[key]; }
+// 	return obj3;
+//   };
+  
+//   merge_options(obj1, obj2);
 
 
 // HASTA ACA ME FUNCIONA PERFECTO EL CONSOLE LOG

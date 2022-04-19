@@ -18,28 +18,27 @@
     <header id="cabecera">
         <div class="div-uno">
             <div class="botonesUno">
-                <input id="masAltos" type="button" value="+ ALTOS A BAJOS" onclick="AltosBajos()"><br>
-                <input id="mujer" type="button" value="HOMBRES &#9794" onclick="Hombres()">
-                <input id="hombre" type="button" value="MUJERES &#9792" onclick="Mujeres()">
+                <input id="masAltos" type="button" value=" &#8593  DE ALTOS A BAJOS  &#8595" onclick="AltosBajos()"><br>
+                <input id="mujer" type="button" value="HOMBRES  &#9794" onclick="Hombres()">
+                <input id="hombre" type="button" value="MUJERES  &#9792" onclick="Mujeres()">
             </div>
         </div>
         <div class="div-dos" >
-            <div class="bienvenida">Filtra tus personajes favoritos</div>
+            <div class="bienvenida">Filtra tus personajes favoritos.</div>
             <img src="img/star-wars-logo.png" alt="">
         </div>
         <div class="div-tres">
-                <div class="botonesDos">
-                    <input class="porAltura" type="button" value="BUSCA + ALTOS" onclick="AlturaMayor()">
-                    <input class="porAltura" type="button" value="BUSCA + BAJOS" onclick="AlturaMenor()">
-                    <input class="esAltura" type="text" onfocus="this.placeholder = ''" placeholder="ESCRIBE"><br>
-                </div>
-                <!-- <div class="bienvenida">Agrega una nueva mascota</div> -->
-                <!-- <div class="botonesUno">
-                    <input class="ingresoMascota" type="text" placeholder="NOMBRE">
-                    <input class="ingresoMascota" type="text" placeholder="RAZA">
-                </div> -->
+            <div class="botonesDos">
+                <input class="esAltura" type="text" onfocus="this.placeholder = ''" placeholder="ESCRIBE UNA ALTURA">
+                <input class="porAltura" type="button" value="BUSCAR + ALTOS" onclick="AlturaMayor()">
+                <input class="porAltura" type="button" value="BUSCAR + BAJOS" onclick="AlturaMenor()">
+            </div>
         </div>
     </header>
+    <div class="div-seis">
+        <input class="mascotas" type="button" value="VER MASCOTAS" onclick="JuntarArreglos()">
+        <input class="todo" type="button" value="VER TODO ORDENADO" onclick="VerTodo()">
+    </div>
     <main id="colunmas">
         <div class="div-cuatro">
             <p id="scroll"></p>
