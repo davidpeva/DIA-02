@@ -57,11 +57,15 @@ header {
     align-items: center;
     display: flex;
     /* flex-wrap: wrap; */
-    height: 80%;
+    height: 70%;
     justify-content: center;
-    padding: 0 0 20px 10px;
+    padding: 10px 0 10px 10px;
     object-fit: contain;
     width: 80%;
+}
+
+img:hover {
+    background-color: rgb(255, 255, 255, .1);
 }
 
 .div-dos, .bienvenida {
@@ -114,7 +118,7 @@ main {
     /* border: red solid 2px; */
     height: 8vh;
     justify-content: center;
-    margin-top: 182px;
+    margin-top: 185px;
     text-align: center;
     width: 100vw;
     z-index: 50;
@@ -166,10 +170,6 @@ input::placeholder {
     color: red;
     font-size: 0.8rem;
 }
-
-/* .cabecera, .bienvenida {
-    font-size: 1.2rem;
-} */
 
 .div-seis input {
     justify-content: space-around;
@@ -257,7 +257,21 @@ p {
     object-fit: contain;
     flex-wrap: wrap;
     z-index: 1;
+    animation-name: fadein-animation;
+    animation-duration: 700ms;
+    animation-fill-mode: forwards;
 }
+
+
+  
+  @keyframes fadein-animation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 /* 
 @keyframes segundo {
     from {
