@@ -1,0 +1,11 @@
+//NODEJS
+Es un entorno de ejecucion de js del lado del servidor
+
+//EL CLIENTE
+Es un software que va a hacer peticiones a uno o varios servers y estos le van a proporcionar o no data como respuesta
+
+//ESTUDIAR
+Sistemas de archivos y comandos de linux
+
+//COMANDO POR SI json-server ./directorio no sirve
+npx json-server ./directorio
